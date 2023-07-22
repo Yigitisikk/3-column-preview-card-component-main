@@ -1,0 +1,137 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   
+}
+
+:root{
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --Transparent-white: hsla(0, 0%, 100%, 0.75);  /* paragraf */
+    --Very-light-gray: hsl(0, 0%, 95%); /*background, headings, buttons*/
+}
+
+body{
+    font-size: 15px;
+    font-family: 'Big Shoulders Display', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--Very-light-gray);
+}
+main{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.container{
+    width: 100%;
+    min-height: 450px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.card{
+    display: flex;
+    min-width: 290px;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 3rem 3rem 2.5rem;
+}
+
+.card h2{
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 2.2rem;
+    color: var(--Very-light-gray);
+}
+
+.card p{
+    font-family: "Lexend Deca", sans-serif;
+    color: var(--Transparent-white);
+    line-height: 1.5rem;
+    font-size: .85rem 
+}
+
+.card img{
+    width: 60px;
+    height: 40px; 
+}
+
+.card-sedans{
+    background-color: var(--Bright-orange);
+    border-radius: 10px 0 0 10px;
+}
+
+.card-suvs{
+    background-color: var(--Dark-cyan);
+}
+
+.card-luxury{
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 10px 10px 0;
+}
+
+.buttons{
+    background-color: var(--Very-light-gray);
+    border-radius: 50px;
+    width: fit-content;
+    font-size: .9rem;
+    font-weight: 500;
+    outline: none;
+    border: 1px solid transparent;
+    padding: .7rem 1.5rem;
+    margin-top: auto;
+    cursor: pointer; 
+}
+.card-sedans button{
+    color: var(--Bright-orange);
+
+}
+.buttons:hover{
+    color: var(--Very-light-gray);
+    border: 1px solid var(--Very-light-gray);
+    background-color: transparent;
+}
+
+.card-suvs button{
+    color: var(--Dark-cyan);
+}
+
+.card-luxury button{
+    color: var(--Very-dark-cyan)
+}
+
+@media screen and (max-width:992px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+        margin: 5rem 0rem;
+    }
+    .card {
+        max-width: 300px;
+    }
+    .card p{
+        min-width: 203px;
+    }
+    
+    main{
+        width: 90%;
+       
+    }
+
+    .card-sedans{
+        border-radius: 10px 10px 0 0;
+    }
+    .card-luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
