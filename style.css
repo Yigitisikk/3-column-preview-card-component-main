@@ -25,9 +25,7 @@ body{
     min-height: 100vh;
     background-color: var(--Very-light-gray);
 }
-h1{
-    display: none;
-}
+
 main{
     width: 50%;
     display: flex;
